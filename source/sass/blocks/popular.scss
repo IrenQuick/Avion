@@ -1,0 +1,29 @@
+@use "../global/variables.scss" as vars;
+
+.popular {
+  display: flex;
+  flex-direction: column;
+  margin: 48px 26px 38px;
+  font-family: "ClashDisplay";
+  color: vars.$dark-primary;
+}
+
+.popular__container {
+  margin: 0 auto;
+}
+
+.popular__wrap {
+  display: grid;
+  grid-template-columns: 163px 163px;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.popular__button {
+  background-color: rgb(249, 249, 249);
+}
+
+@media (min-width: vars.$desktop-width) {
+
+}
+

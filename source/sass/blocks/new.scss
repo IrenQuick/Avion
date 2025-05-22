@@ -1,0 +1,81 @@
+@use "../global/variables.scss" as vars;
+
+.new {
+  display: flex;
+  flex-direction: column;
+  margin: 48px 26px 38px;
+  font-family: "ClashDisplay";
+  color: vars.$dark-primary;
+}
+
+.new__container {
+  margin: 0 auto;
+}
+
+.new__wrap {
+  display: grid;
+  grid-template-columns: 163px 163px;
+  row-gap: 20px;
+  column-gap: 16px;
+  padding-bottom: 30px;
+}
+
+.new__card-name {
+  margin: 0;
+  margin-top: 24px;
+}
+
+.new__card-price {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.new__button {
+  background-color: rgb(249, 249, 249);
+}
+
+@media (min-width: vars.$desktop-width) {
+    .new {
+      justify-content: center;
+    }
+
+  .new__title {
+    text-align: start;
+  }
+
+  .new__wrap {
+    grid-template-columns: repeat(4, 305px);
+  }
+
+  .features__button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .new__button {
+    padding: 16px 32px;
+    transition: all 0.3s ease;
+  }
+
+  .new__button:hover {
+    background-color: vars.$button-color;
+    color: rgb(249, 249, 249);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-1 {
+    order: 2;
+  }
+
+  .card-2 {
+    order: 3;
+  }
+
+  .card-3 {
+    order: 2;
+  }
+
+  .card-4 {
+    order: 1;
+  }
+}

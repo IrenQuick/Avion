@@ -1,0 +1,90 @@
+@use "../global/variables.scss" as vars;
+
+.hero__container {
+  background-color: vars.$dark-primary;
+  color: rgb(255, 255, 255);
+  padding: 0 24px 24px;
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 342px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-family: 'ClashDisplay';
+  font-size: 32px;
+  font-weight: 400;
+  text-align: start;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.hero__text {
+  order: 1;
+  font-family: 'Satoshi';
+  font-size: 18px;
+  margin: 0 0 32px;;
+  padding: 0;
+}
+
+.hero__button {
+  order: 2;
+  background-color: vars.$button-color;
+  color: #ffffff;
+
+}
+
+.hero__image {
+  display: none;
+}
+
+@media (min-width: vars.$desktop-width) {
+
+  .hero__container {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .hero__info {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 60px 60px 0;
+  }
+
+  .hero__title {
+    width: 513px;
+    margin: 0 0 41px;
+  }
+
+  .hero__text {
+    min-width: 600px;
+    order: 2;
+    margin-top: 150px;
+    margin-bottom: 0;
+  }
+
+  .hero__button {
+    width: 150px;
+    order: 1;
+    padding: 16px 32px;
+    transition: all 0.3s ease;
+  }
+
+  .hero__button:hover {
+    background-color: rgb(249, 249, 249);
+    color: vars.$dark-primary;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .hero__image {
+    display: block;
+  }
+}
