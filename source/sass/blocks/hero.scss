@@ -35,15 +35,27 @@
 .hero__button {
   order: 2;
   background-color: vars.$button-color;
-  color: #ffffff;
+  color: vars.$light-grey;
+  transition: all 0.3s ease;
+}
 
+.hero__button:hover {
+  background-color: vars.$light-grey;
+  color: vars.$dark-primary;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hero__image {
   display: none;
 }
 
+
+
 @media (min-width: vars.$desktop-width) {
+
+  .hero {
+    padding: 60px 80px;
+  }
 
   .hero__container {
     display: flex;
@@ -74,15 +86,7 @@
     width: 150px;
     order: 1;
     padding: 16px 32px;
-    transition: all 0.3s ease;
   }
-
-  .hero__button:hover {
-    background-color: rgb(249, 249, 249);
-    color: vars.$dark-primary;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
 
   .hero__image {
     display: block;

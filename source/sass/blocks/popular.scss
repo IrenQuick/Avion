@@ -12,6 +12,10 @@
   margin: 0 auto;
 }
 
+.popular__title {
+  margin-bottom: 36px;
+}
+
 .popular__wrap {
   display: grid;
   grid-template-columns: 163px 163px;
@@ -19,11 +23,62 @@
   margin-bottom: 30px;
 }
 
+.popular__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular__card-name {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.popular__card-name--desktop {
+  display: none;
+}
+
+.popular__card-price--desktop {
+  display: none;
+}
+
+.popular__card--desktop {
+  display: none;
+}
+
 .popular__button {
   background-color: rgb(249, 249, 249);
+  transition: all 0.3s ease;
+}
+
+.popular__button:hover {
+  background-color: vars.$button-color;
+  color: rgb(249, 249, 249);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: vars.$desktop-width) {
+  .popular__wrap {
+    grid-template-columns: 630px 305px 305px;
+  }
 
+  .popular__card--desktop {
+    display: flex;
+  }
+
+  .popular__card-name--mobile {
+    display: none;
+  }
+
+  .popular__card-price--mobile {
+    display: none;
+  }
+
+  .popular__card-name--desktop {
+    display: inline-block;
+  }
+
+  .popular__card-price--desktop {
+    display: inline-block;
+  }
 }
 

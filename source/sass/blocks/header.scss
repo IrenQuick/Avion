@@ -1,18 +1,20 @@
 @use "../global/variables.scss" as vars;
 
 .header {
-  margin: 0 24px;
+  position: relative;
 }
 
 .header__up {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   padding: 20px 0;
   font-family: 'ClashDisplay';
 }
 
 .header__wrapper {
   display: flex;
+  margin-right: 36px;
 }
 
 .header__search {
@@ -20,6 +22,7 @@
 }
 
 .header__logo {
+  margin-left: 24px;
   font-size: 24px;
 }
 
@@ -31,28 +34,65 @@
   fill: rgb(42, 37, 75);
 }
 
-.burger {
-  position: relative;
-  order: 3;
+.header__burger-toggle {
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  background-color: transparent;
   border: none;
-  background: transparent;
-  width: 16px;
-  height: 16px;
-  padding: 0;
+}
+
+.header__burger-toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 10px;
+  background-image: url("../../img/svg/burger-toggle.svg");
+  background-repeat: no-repeat;
+}
+
+.header__navigation {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.burger span {
-  display: block;
-  height: 2px;
+.header__down--closed {
+  position: absolute;
+  content: "";
   width: 100%;
-  background-color: vars.$dark-primary;
+  background-color: #ffffff;
 }
 
-.header__down {
+.header__down--closed {
   display: none;
+}
+
+.header__navigation-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  padding: 0;
+  margin: 0 auto;
+
+}
+
+.header__navigation-item {
+  margin-bottom: 10px;
+}
+
+.header__navigation-link {
+  color: vars.$dark-primary;
+}
+
+.header__navigation-link:hover {
+  color: vars.$dark-primary;
+}
+
+.header__navigation-link {
+  color: vars.$description-text;
 }
 
 @media (min-width: vars.$desktop-width) {
@@ -65,7 +105,7 @@
     border-bottom: 1px solid rgb(191, 186, 186);
   }
 
-  .burger {
+  .header__burger {
     display: none;
   }
 
@@ -94,8 +134,14 @@
     fill: rgb(42, 37, 75);
   }
 
+  .header__burger-toggle {
+    display: none;
+  }
+
   .header__down {
     display: block;
+    position: static;
+    padding-top: 20px;
   }
 
   .header__navigation-list {
@@ -105,14 +151,5 @@
 
   .header__navigation-item {
     font-size: 16px;
-    margin-right: 44px;
-  }
-
-  .header__navigation-link {
-    color: vars.$description-text;
-  }
-
-  .header__navigation-link:hover {
-    color: vars.$dark-primary;
   }
 }

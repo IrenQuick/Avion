@@ -1,0 +1,130 @@
+@use "../global/variables.scss" as vars;
+
+.footer {
+  margin: 0 auto;
+  background-color: vars.$dark-primary;
+  color: vars.$light-grey;
+  font-family: 'ClashDisplay';
+  padding: 40px 24px 20px;
+}
+
+.footer__wrap-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 96px;
+  margin-bottom: 28px;
+}
+
+.footer__item-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer__item {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.footer__link {
+  color: vars.$light-grey;
+}
+
+.footer__link:hover {
+  color: vars.$description-text;
+  cursor: default;
+}
+
+.footer__form-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.footer__form {
+  display: flex;
+}
+
+.footer__form-title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.footer__field {
+  min-width: 224px;
+  margin: 0;
+  padding: 16px 25px 16px 32px;
+  font-family: 'Satoshi';
+  background-color: vars.$button-color;
+  color: rgb(255, 255, 255);
+  border: transparent;
+}
+
+.footer__field::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.footer__submit {
+  min-width: 118px;
+  background-color: vars.$light-grey;
+  color: vars.$dark-primary;;
+  box-sizing: border-box;
+  border: transparent;
+  padding: 16px 30px;
+  transition: all 0.3s ease;
+}
+
+.footer__submit:hover {
+  background-color: vars.$primary;
+  color: vars.$light-grey;
+  transition: all 0.3s ease;
+}
+
+.footer__wrap-social {
+  display: flex;
+  padding-top: 20px;
+  border-top: 1px solid vars.$primary;
+}
+
+.footer__copyright-wrap {
+  margin: 0 auto;
+}
+
+@media (min-width: vars.$desktop-width) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 109px;
+  }
+
+  .footer__wrap-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__item {
+    min-width: 108px;
+  }
+
+  .footer__field {
+    max-width: 509px;
+  }
+
+  .footer__wrap-social {
+    justify-content: space-between;
+  }
+
+  .footer__copyright-wrap {
+    margin: 0;
+  }
+
+  .footer__sosial-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+
+  .footer__social-icon {
+    fill: vars.$light-grey;
+  }
+}

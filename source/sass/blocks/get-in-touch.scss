@@ -1,0 +1,79 @@
+@use "../global/variables.scss" as vars;
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 24px 0;
+}
+
+.get-in-touch__container {
+  margin: 0 auto;
+}
+
+.get-in-touch__title {
+  font-family: 'ClashDisplay';
+  width: 274px;
+  color: vars.$dark-primary;
+  margin-bottom: 12px;
+}
+
+.get-in-touch__text-wrapper {
+  width: 342px;
+  margin-bottom: 44px;
+  color: rgb(80, 89, 119);
+}
+
+.get-in-touch__text {
+  margin-bottom: 20px;
+}
+
+.get-in-touch__phone {
+  max-width: 342px;
+  background-color: vars.$light-grey;
+  margin: 0 auto;
+  margin-bottom: 38px;
+  transition: all 0.3s ease;
+}
+
+.get-in-touch__phone:hover {
+  background-color: vars.$dark-primary;
+  color: vars.$light-grey;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+
+.get-in-touch__image {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: vars.$desktop-width) {
+  .get-in-touch {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .get-in-touch__container {
+    position: relative;
+    padding: 72px 100px 0 84px;
+  }
+
+  .get-in-touch__title {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .get-in-touch__text-wrapper {
+    width: 100%
+  }
+
+  .get-in-touch__phone {
+    position: absolute;
+    bottom: 0;
+    left: 84px;
+    padding: 16px 32px;
+  }
+
+}

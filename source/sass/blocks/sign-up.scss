@@ -1,0 +1,94 @@
+@use "../global/variables.scss" as vars;
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  margin: 48px 24px;;
+}
+
+.sign-up__container {
+  margin: 0 auto;
+  color: vars.$dark-primary;
+}
+
+.sign-up__title {
+  font-family: "ClashDisplay";
+  font-size: 20px;
+  white-space: nowrap;
+  margin-bottom: 16px;
+}
+
+.sign-up__text {
+  width: 329px;
+  font-size: 14px;
+  margin-bottom: 64px;
+}
+
+.sign-up-form {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up__field::placeholder {
+  color: rgb(227, 224, 224);
+}
+
+.sign-up__field {
+  margin: 0;
+  padding: 17px 25px 17px 32px;
+  background-color: vars.$light-grey;
+  border: transparent;
+}
+
+.sign-up-submit {
+  width: 118px;
+  background-color: vars.$dark-primary;
+  color: vars.$light-grey;
+  box-sizing: border-box;
+  border: transparent;
+  padding: 16px 32px;
+  transition: all 0.3s ease;
+}
+
+.sign-up-submit:hover {
+  background-color: vars.$primary;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: vars.$desktop-width) {
+  .sign-up {
+    margin: 0;
+    padding: 52px 74px 65px 93px;
+    background-color: vars.$light-grey;
+  }
+
+  .sign-up__container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 0;
+  }
+
+  .sign-up__title {
+    padding-top: 68px;
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .sign-up__text {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    margin: 16px 0 72px;
+
+  }
+
+  .sign-up-form {
+    padding-bottom: 54px;
+  }
+
+  .field {
+    padding-right: 205px;
+  }
+}

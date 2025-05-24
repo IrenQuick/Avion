@@ -32,6 +32,7 @@ fill: vars.$dark-primary;
 .features__item-title {
   font-family: 'ClashDisplay';
   margin-bottom: 12px;
+  margin-top: 16px;
 }
 
 .features__text {
@@ -43,7 +44,7 @@ fill: vars.$dark-primary;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 120px 86px;
+      margin: 60px 86px;
       padding: 0;
     }
     .features__wrap {
